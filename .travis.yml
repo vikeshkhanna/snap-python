@@ -2,8 +2,9 @@ language: cpp
 before_install: 
  - sudo apt-get update
  - sudo apt-get install libgtest-dev
- - cd ../ && git clone https://github.com/vikeshkhanna/snap.git ; cd -
+ - sudo apt-get install swig
  - cd /usr/src/gtest && sudo cmake . && sudo cmake --build . && sudo mv libg* /usr/local/lib/ ; cd -
+ - cd ../ && git clone https://github.com/vikeshkhanna/snap.git ; cd -
 
 script: 
   - make 
